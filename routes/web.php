@@ -39,3 +39,6 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 // 话题分类
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+// 上传图片
+Route::post('upload_time', 'TopicsController@uploadImage')->name('topics.upload_image');
